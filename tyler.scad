@@ -66,7 +66,7 @@ module hex(size=[5,5],style=[10,1],custom_extrude=false,center=false,echo_info=f
 
 
 // GRID EXAMPLE:
-// grid(size=[4,4],style=[5,1],custom_extrude=true,center=true,echo_info=true);
+// grid(size=[5,5],style=[10,1],custom_extrude=false,center=false,echo_info=false);
 
 module grid(size=[5,5],style=[5,1],custom_extrude=false,center=false,echo_info=false) {
     /* Unpacking variables */

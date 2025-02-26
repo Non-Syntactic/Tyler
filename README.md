@@ -9,16 +9,18 @@ Each pattern function in the library has a set of modifiers to change the size, 
 ### Patterns
 **Currently supported patterns:**
 * Hex
+* Grid
 
 **Patterns to be added:**
 * Wave
 * Triangle
-* Grid
 
 ### Function Table
 |Pattern Name|Expanded Example|
 |------------|----------------|
 |Hexagon Tile|`hex(size=[5,5],style=[10,1],custom_extrude=false,center=false,echo_info=false);`|
+|Grid Tile|`grid(size=[5,5],style=[10,1],custom_extrude=false,center=false,echo_info=false);`|
+
 
 ## Installation
 To install the library, you simply need to move `tyler.scad` to your OpenSCAD library folder.
