@@ -30,7 +30,7 @@ To install the library, you simply need to move `tyler.scad` to your OpenSCAD li
 
 That's it!
 
-## Usage
+## Basic Documentation
 ### Getting Started!
 
 To include the library in your openscad file, use the following:
@@ -64,7 +64,7 @@ hex([2,7],[10,1],center=true);
 
 **NOTE: The spacing variable in the style option (`1` in this example) will only work with the defult shape. Adding a custom shape as a child to the function will cause the spacing variable to not take effect.**
 
-### Custom Extrusion
+### Function Extrusion
 Ok, so what if you want to extrude a 2D object in the tile that differs depending on its X,Y position?
 You can use the `custom_extrude` flag along with your own SCAD function to make tiles extrude differently from each other!
 
@@ -77,7 +77,7 @@ Here, we have added `custom_extrude=true` to the function, which tells the gener
 
 Now you can add your own function. The function should be named accordingly: `<patterns_function_name>_extrude`, and contain `x`,`y` variables in the parentheses. Here is an example:
 
-**Custom Extrude Example:**
+**Function Extrude Example:**
 ```openscad
 function hex_extrude(x,y) = x*y+1;
 
@@ -86,10 +86,27 @@ hex(size=[10,10],style=[10,1],custom_extrude=true);
 
 Yay! The pattern should look like an upward slope that increases height by 1. This is because the `x,y` variables from the tile generator are fed into the function on the generation of each shape. Here are some more examples!
 
-**Custom Extrude Function Examples:**
+**Function Extrude Function Examples:**
 ```openscad
 function hex_extrude(x,y) = x*6+1; // Slope
 function hex_extrude(x,y) = rands(1,20,1)[0]; // Random heights
 function hex_extrude(x,y) = sin(x*+20)*20; // Simple sine wave
 function hex_extrude(x,y) = sin(x*+20)*20 + sin(y*+20)*20; // Dual axis sine wave
+```
+
+### Shape input
+
+You can also add your own shapes to the generators, by simply adding them as a *child*:
+
+```openscad
+hex(size=[5,5],style=[7,5]) square(5);
+```
+
+The shape `square(5)` acts as the child to the hex generator in this case, and it is tiled instead of the regular hexagon. This can be used to tile other shapes like triangles or circles:
+
+**Shape Input Examples**
+```openscad
+hex(size=[5,5]) square(5); // Squares
+hex(size=[5,5]) circle(d=8); // Circles
+hex(size=[4,5]) circle(d=10,$fn=3); // Triangles (Restraining max vertices to create 3 sided circle)
 ```
