@@ -10,16 +10,17 @@ Each pattern function in the library has a set of modifiers to change the size, 
 **Currently supported patterns:**
 * Hex
 * Grid
-
-**Patterns to be added:**
 * Wave
-* Triangle
+**Patterns to be added:**
+* Triangle ?
+* Radial
 
 ### Function Table
-|Pattern Name|Expanded Example|
-|------------|----------------|
-|Hexagon Tile|`hex(size=[5,5],style=[10,1],custom_extrude=false,center=false,echo_info=false);`|
-|Grid Tile|`grid(size=[5,5],style=[10,1],custom_extrude=false,center=false,echo_info=false);`|
+| Pattern Name | Expanded Example                                                                                |
+| ------------ | ----------------------------------------------------------------------------------------------- |
+| Hexagon Tile | `hex(size=[5,5],style=[10,1],custom_extrude=false,center=false,echo_info=false);`               |
+| Grid Tile    | `grid(size=[5,5],style=[10,1],custom_extrude=false,center=false,echo_info=false);`              |
+| Wave Tile    | `wave(size=[20,2],style=[5,1],wave=[60,5,0],custom_extrude=false,center=false,echo_info=false)` |
 
 
 ## Installation
