@@ -1,7 +1,7 @@
 # Tyler
 An OpenSCAD Library for Tiling Objects
 ___
-This is a small OpenSCAD library for tiling 3D and 2D objects on the X and Y axis. It aims to be simple to use, while being helpful and productive in 3D modeling. 
+This is a small OpenSCAD library for tiling 3D and 2D objects on the X and Y axis. It aims to be simple to use, while being helpful and productive in 3D modeling.
 
 ## Functionality
 Each pattern function in the library has a set of modifiers to change the size, scale, and style of the shapes.
@@ -11,6 +11,7 @@ Each pattern function in the library has a set of modifiers to change the size, 
 * Hex
 * Grid
 * Wave
+
 **Patterns to be added:**
 * Triangle ?
 * Radial
@@ -30,6 +31,11 @@ To install the library, you simply need to move `tyler.scad` to your OpenSCAD li
 * For Windows, it's `C:\Users\YourUsername\AppData\Roaming\OpenSCAD\libraries\`
 
 That's it!
+
+## TODO
+* Add more patterns lol
+* Re-style the style modifiers
+* Support for Z axis?
 
 ## Basic Documentation
 ### Getting Started!
@@ -87,7 +93,7 @@ hex(size=[10,10],style=[10,1],custom_extrude=true);
 
 Yay! The pattern should look like an upward slope that increases height by 1. This is because the `x,y` variables from the tile generator are fed into the function on the generation of each shape. Here are some more examples!
 
-**Function Extrude Function Examples:**
+**Function Extrude Examples:**
 ```openscad
 function hex_extrude(x,y) = x*6+1; // Slope
 function hex_extrude(x,y) = rands(1,20,1)[0]; // Random heights
