@@ -1,3 +1,9 @@
+/*
+This file contains all tiling patterns in one.
+Move me to your openscad library folder!
+    - Date: 2025
+    - Author: Nonsyntactic
+*/
 
 // HEX EXAMPLE:
 // hex(size=[5,5],style=[10,1],custom_extrude=false,center=false,echo_info=false);
@@ -116,7 +122,7 @@ module grid(size=[5,5],style=[5,1],custom_extrude=false,center=false,echo_info=f
 }
 
 // WAVE EXAMPLE:
-// wave(size=[20,2],style=[5,1],wave=[60,5,0],custom_extrude=false,center=false,echo_info=false)
+//wave(size=[20,2],style=[5,1],wave=[60,5,0],custom_extrude=false,center=false,echo_info=false)
 
 
 module wave(size=[20,2],style=[5,1],wave=[60,5,0],custom_extrude=false,center=false,echo_info=false) {
